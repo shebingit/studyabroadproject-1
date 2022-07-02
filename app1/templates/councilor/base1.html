@@ -391,18 +391,21 @@
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                            <img src="static/images/faces/face28.jpg" alt="profile" />
+                            <img src="{% static 'images/faces/face1.jpg' %}" alt="profile" />
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
+                                <i class="icon-head menu-icon text-primary"></i> Dilshad
+                            </a>
+                            <a class="dropdown-item" href="{% url 'DocumentOfficer_Accsetting' %}">
                                 <i class="ti-settings text-primary"></i> Settings
                             </a>
-                            <a class="dropdown-item">
+                            <a class="dropdown-item" href="">
                                 <i class="ti-power-off text-primary"></i> Logout
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item d-none d-lg-flex">
+                    <li class="nav-item  d-none d-lg-flex">
                         <a class="nav-link nav-settings" href="#">
                             <i class="icon-ellipsis"></i>
                         </a>

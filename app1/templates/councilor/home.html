@@ -1,4 +1,4 @@
-{% extends 'councilor/base1.html' %} {% block content %}
+{% extends 'councilor/base1.html' %}{%load static%} {% block content %}
 <style>
     .card {
         width: 420px;
@@ -26,7 +26,7 @@
                 <div class="h-100" style="background-color: #ffffff;border: hidden;border-radius: 13px;">
                     <h4 class="text-center py-3 fs-2 fw-bold">PROFILE</h4>
                     <div class="text-center">
-                        <img src="https://thumbs.dreamstime.com/b/portrait-smart-male-profile-symbol-minimal-cartoon-style-166146853.jpg" alt="prof" class="w-50 rounded-circle">
+                        <img src="{% static 'images/faces/face1.jpg' %}" alt="prof" class="w-50 rounded-circle">
                     </div>
                     <div class="text-center py-3 fs-3 font-monospace">
                         <h6 class=" fs-6 py-2">Joining date: 20/05/2022</h6>
