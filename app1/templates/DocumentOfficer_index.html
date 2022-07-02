@@ -1,0 +1,651 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Study Abroad</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{% static 'vendors/feather/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'js/select.dataTables.min.css' %}">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{% static 'css/vertical-layout-light/style.css' %}">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="{% static 'logo3.jpg' %}" />
+    <style>
+        body {
+            background-color: #f9f9fa
+        }
+        
+        .flex {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto
+        }
+        
+        @media (max-width:50.98px) {
+            .padding {
+                padding: 0px
+            }
+        }
+        
+        @media (max-width:40.98px) {
+            .padding {
+                padding: 0px
+            }
+        }
+        
+        .padding {
+            padding: 0px
+        }
+        
+        .box.box-warning {
+            border-top-color: #f39c12;
+        }
+        
+        .box {
+            position: relative;
+            border-radius: 3px;
+            background: #ffffff;
+            border-top: 3px solid #d2d6de;
+            margin-bottom: 20px;
+            width: 109%;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .box-header.with-border {
+            border-bottom: 1px solid #f4f4f4
+        }
+        
+        .box-header.with-border {
+            border-bottom: 1px solid #f4f4f4;
+        }
+        
+        .box-header {
+            color: #444;
+            display: block;
+            padding: 15px;
+            position: relative;
+        }
+        
+        .box-header:before,
+        .box-body:before,
+        .box-footer:before,
+        .box-header:after,
+        .box-body:after,
+        .box-footer:after {
+            content: " ";
+            display: table;
+        }
+        
+        .box-header {
+            color: #444;
+            display: block;
+            padding: 10px;
+            position: relative
+        }
+        
+        .box-header>.fa,
+        .box-header>.glyphicon,
+        .box-header>.ion,
+        .box-header .box-title {
+            display: inline-block;
+            font-size: 18px;
+            margin: 0;
+            line-height: 1;
+        }
+        
+        .box-header>.box-tools {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+        
+        .box-header>.box-tools [data-toggle="tooltip"] {
+            position: relative;
+        }
+        
+        .bg-yellow,
+        .callout.callout-warning,
+        .alert-warning,
+        .label-warning,
+        .modal-warning .modal-body {
+            background-color: #f39c12 !important;
+        }
+        
+        .bg-yellow {
+            color: #fff !important;
+        }
+        
+        .btn {
+            border-radius: 3px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 1px solid transparent;
+        }
+        
+        .btn-box-tool {
+            padding: 5px;
+            font-size: 12px;
+            background: transparent;
+            color: #97a0b3;
+        }
+        
+        .direct-chat .box-body {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            position: relative;
+            overflow-x: hidden;
+            padding: 0;
+        }
+        
+        .box-body {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            padding: 10px;
+        }
+        
+        .box-header:before,
+        .box-body:before,
+        .box-footer:before,
+        .box-header:after,
+        .box-body:after,
+        .box-footer:after {
+            content: " ";
+            display: table;
+        }
+        
+        .direct-chat-messages {
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+            padding: 10px;
+            height: 250px;
+            overflow: auto;
+        }
+        
+        .direct-chat-messages,
+        .direct-chat-contacts {
+            -webkit-transition: -webkit-transform .5s ease-in-out;
+            -moz-transition: -moz-transform .5s ease-in-out;
+            -o-transition: -o-transform .5s ease-in-out;
+            transition: transform .5s ease-in-out;
+        }
+        
+        .direct-chat-msg {
+            margin-bottom: 10px;
+        }
+        
+        .direct-chat-msg,
+        .direct-chat-text {
+            display: block;
+        }
+        
+        .direct-chat-info {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 12px;
+        }
+        
+        .direct-chat-timestamp {
+            color: #999;
+        }
+        
+        .btn-group-vertical>.btn-group:after,
+        .btn-group-vertical>.btn-group:before,
+        .btn-toolbar:after,
+        .btn-toolbar:before,
+        .clearfix:after,
+        .clearfix:before,
+        .container-fluid:after,
+        .container-fluid:before,
+        .container:after,
+        .container:before,
+        .dl-horizontal dd:after,
+        .dl-horizontal dd:before,
+        .form-horizontal .form-group:after,
+        .form-horizontal .form-group:before,
+        .modal-footer:after,
+        .modal-footer:before,
+        .modal-header:after,
+        .modal-header:before,
+        .nav:after,
+        .nav:before,
+        .navbar-collapse:after,
+        .navbar-collapse:before,
+        .navbar-header:after,
+        .navbar-header:before,
+        .navbar:after,
+        .navbar:before,
+        .pager:after,
+        .pager:before,
+        .panel-body:after,
+        .panel-body:before,
+        .row:after,
+        .row:before {
+            display: table;
+            content: " ";
+        }
+        
+        .direct-chat-img {
+            border-radius: 50%;
+            float: left;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .direct-chat-text {
+            border-radius: 5px;
+            position: relative;
+            padding: 5px 10px;
+            background: #d2d6de;
+            border: 1px solid #d2d6de;
+            margin: 5px 0 0 50px;
+            color: #444;
+        }
+        
+        .direct-chat-msg,
+        .direct-chat-text {
+            display: block;
+        }
+        
+        .direct-chat-text:before {
+            border-width: 6px;
+            margin-top: -6px;
+        }
+        
+        .direct-chat-text:after,
+        .direct-chat-text:before {
+            position: absolute;
+            right: 100%;
+            top: 15px;
+            border: solid transparent;
+            border-right-color: #d2d6de;
+            content: ' ';
+            height: 0;
+            width: 0;
+            pointer-events: none;
+        }
+        
+        .direct-chat-text:after {
+            border-width: 5px;
+            margin-top: -5px;
+        }
+        
+        .direct-chat-text:after,
+        .direct-chat-text:before {
+            position: absolute;
+            right: 100%;
+            top: 15px;
+            border: solid transparent;
+            border-right-color: #d2d6de;
+            content: ' ';
+            height: 0;
+            width: 0;
+            pointer-events: none;
+        }
+        
+        :after,
+         :before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .direct-chat-msg:after {
+            clear: both;
+        }
+        
+        .direct-chat-msg:after {
+            content: " ";
+            display: table;
+        }
+        
+        .direct-chat-info {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 12px;
+        }
+        
+        .right .direct-chat-img {
+            float: right;
+        }
+        
+        .direct-chat-warning .right>.direct-chat-text {
+            background: #f39c12;
+            border-color: #f39c12;
+            color: #fff;
+        }
+        
+        .right .direct-chat-text {
+            margin-right: 50px;
+            margin-left: 0;
+        }
+        
+        .box-footer {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            border-top: 1px solid #f4f4f4;
+            padding: 10px;
+            background-color: #fff;
+        }
+        
+        .box-header:before,
+        .box-body:before,
+        .box-footer:before,
+        .box-header:after,
+        .box-body:after,
+        .box-footer:after {
+            content: " ";
+            display: table;
+        }
+        
+        .input-group-btn {
+            position: relative;
+            font-size: 0;
+            white-space: nowrap;
+        }
+        
+        .input-group-btn:last-child>.btn,
+        .input-group-btn:last-child>.btn-group {
+            z-index: 2;
+            margin-left: -1px;
+        }
+        
+        .btn-warning {
+            color: #fff;
+            background-color: #f0ad4e;
+            border-color: #eea236;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+                <a class="navbar-brand ml-3" href="#"><img id="logo" src="{%static 'logo-1.png'%}" style="height: 50px !important;width: 180px !important;"></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <img src="{% static 'images/faces/face1.jpg' %}" alt="profile" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item">
+                                <i class="icon-head menu-icon text-primary"></i> Vinay
+                            </a>
+                            <a class="dropdown-item" href="{% url 'DocumentOfficer_Accsetting' %}">
+                                <i class="ti-settings text-primary"></i> Settings
+                            </a>
+                            <a class="dropdown-item" href="">
+                                <i class="ti-power-off text-primary"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item  d-none d-lg-flex">
+                        <a class="nav-link nav-settings" href="#">
+                            <i class="icon-ellipsis"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+           <span class="icon-menu"></span>
+         </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_settings-panel.html -->
+            <div id="right-sidebar" class="settings-panel">
+                <i class="settings-close ti-close"></i>
+                <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#contacts-section" role="tab1" aria-controls="contacts-section" aria-expanded="true">CONTACTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="setting-content">
+                    <div class="tab-pane fade show active scroll-wrapper" id="contacts-section" role="tabpanel" aria-labelledby="contacts-section">
+                        <ul class="chat-list">
+                            <li class="list active">
+                                <div class="profile">
+                                    <a class="nav-link" data-toggle="tab" href="#chats-section"><img src="static/images/faces/face1.jpg" alt="image"></a><span class="online"></span></div>
+                                <div class="info">
+                                    <p>Thomas Douglas</p>
+                                    <p>Student Counciler</p>
+                                </div>
+                                <small class="text-muted my-auto">19 min</small>
+                            </li>
+                            <li class="list">
+                                <div class="profile">
+                                    <a class="nav-link" data-toggle="tab" href="#chats-section"><img src="static/images/faces/face2.jpg" alt="image"></a><span class="offline"></span></div>
+                                <div class="info">
+                                    <div class="wrapper d-flex">
+                                        <p>Catherine</p>
+                                    </div>
+                                    <p>Document Officer</p>
+                                </div>
+                                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                                <small class="text-muted my-auto">23 min</small>
+                            </li>
+                            <li class="list">
+                                <div class="profile">
+                                    <a class="nav-link" data-toggle="tab" href="#chats-section"><img src="static/images/faces/face3.jpg" alt="image"></a><span class="online"></span></div>
+                                <div class="info">
+                                    <p>Daniel Russell</p>
+                                    <p>Document Officer</p>
+                                </div>
+                                <small class="text-muted my-auto">14 min</small>
+                            </li>
+                            <li class="list">
+                                <div class="profile">
+                                    <a class="nav-link" data-toggle="tab" href="#chats-section"><img src="static/images/faces/face4.jpg" alt="image"></a><span class="offline"></span></div>
+                                <div class="info">
+                                    <p>James Richardson</p>
+                                    <p>Document Officer</p>
+                                </div>
+                                <small class="text-muted my-auto">2 min</small>
+                            </li>
+                            <li class="list">
+                                <div class="profile">
+                                    <a class="nav-link" data-toggle="tab" href="#chats-section"><img src="static/images/faces/face5.jpg" alt="image"></a><span class="online"></span></div>
+                                <div class="info">
+                                    <p>Madeline Kennedy</p>
+                                    <p>Document Officer</p>
+                                </div>
+                                <small class="text-muted my-auto">5 min</small>
+                            </li>
+                            <li class="list">
+                                <div class="profile">
+                                    <a class="nav-link" data-toggle="tab" href="#chats-section"><img src="static/images/faces/face6.jpg" alt="image"></a><span class="online"></span></div>
+                                <div class="info">
+                                    <p>Sarah Graves</p>
+                                    <p>Document Officer</p>
+                                </div>
+                                <small class="text-muted my-auto">47 min</small>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- To do section tab ends -->
+                    <div class="tab-pane fade py-3" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+                        <div class="page-content page-container" id="page-content">
+                            <div class="padding">
+                                <div class="row container d-flex justify-content-center">
+                                    <div class="col-md-12 ">
+
+                                        <div class="box box-warning direct-chat direct-chat-warning">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Chat Messages</h3>
+                                            </div>
+
+                                            <div class="box-body " style="height:45vh">
+
+                                                <div class="direct-chat-messages" style="height:65vh">
+
+                                                    <div class="direct-chat-msg">
+                                                        <div class="direct-chat-info clearfix">
+                                                            <span class="direct-chat-name pull-left">You</span>
+                                                            <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                                                        </div>
+
+                                                        <img class="direct-chat-img" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="message user image">
+
+                                                        <div class="direct-chat-text">
+                                                            For what reason would it be advisable for me to think about business content?
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="direct-chat-msg right">
+                                                        <div class="direct-chat-info clearfix">
+                                                            <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                                                            <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
+                                                        </div>
+
+                                                        <img class="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user image">
+
+                                                        <div class="direct-chat-text">
+                                                            Thank you for your believe in our supports
+                                                        </div>
+
+                                                    </div>
+
+
+
+                                                    <div class="direct-chat-msg">
+                                                        <div class="direct-chat-info clearfix">
+                                                            <span class="direct-chat-name pull-left">You</span>
+                                                            <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span>
+                                                        </div>
+
+                                                        <img class="direct-chat-img" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="message user image">
+
+                                                        <div class="direct-chat-text">
+                                                            For what reason would it be advisable for me to think about business content?
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="direct-chat-msg right">
+                                                        <div class="direct-chat-info clearfix">
+                                                            <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                                                            <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span>
+                                                        </div>
+
+                                                        <img class="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user image">
+
+                                                        <div class="direct-chat-text">
+                                                            I would love to.
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="box-footer">
+                                                <form action="#" method="post">
+                                                    <div class="input-group">
+                                                        <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+                                                        <span class="input-group-btn">
+                                              <button type="button" class="btn btn-warning btn-flat">Send</button>
+                                            </span>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- chat tab ends -->
+                </div>
+            </div>
+            <!-- partial -->
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="DocumentOfficer_dashboard">
+                            <i class="icon-grid menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    {%block content%} {%endblock%}
+                </div>
+            </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+
+        <!-- partial -->
+    </div>
+
+    <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+    <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net/jquery.dataTables.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>
+    <script src="{% static 'js/dataTables.select.min.js' %}"></script>
+
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="{% static 'js/off-canvas.js' %}"></script>
+    <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+    <script src="{% static 'js/template.js' %}"></script>
+    <script src="{% static 'js/settings.js' %}"></script>
+    <script src="{% static 'js/todolist.js' %}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="{% static 'js/dashboard.js' %}"></script>
+    <script src="{% static 'js/Chart.roundedBarCharts.js' %}"></script>
+
+    <!--file upload -->
+    <script src="{% static 'js/file-upload.js' %}"></script>
+    <!-- End custom js for this page-->
+</body>

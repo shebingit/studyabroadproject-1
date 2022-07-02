@@ -1,0 +1,76 @@
+{% extends 'DocumentOfficer_index.html'%}
+{% load static %}
+{% block content %}
+
+<div class="row">
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Current Leads</h4>
+        <div class="form-group">
+          <input type="text" class="form-control text-dark" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
+           </div>
+        <div class="table-responsive">
+          <table class="table table-hover" id="myTable">
+            <thead>
+              <tr>
+                <th>Sl.no</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>Counselor Name</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+             
+              <tr data-href="">
+                <td>1</td>
+                <td><img src="{% static 'images/faces/face3.jpg' %}" width="100" height="100" class="rounded-circle">&nbsp;&nbsp;
+                  <span>Hari</span></td>
+                <td>7845125241</td>
+                <td>hari@gmail.com</td>
+                <td>Canada</td>
+                <td>James</td>
+                <td><a href="{% url 'DocumentOfficer_CanadaDocuments' %}">
+                  <label class="badge badge-warning">More</label></td>
+                </a>
+              </tr>
+             
+              <tr data-href="">
+                <td>2</td>
+                <td><img src="{% static 'images/faces/face7.jpg' %}" width="100" height="100" class="rounded-circle">&nbsp;&nbsp;
+                  <span>Haneef</span></td>
+                <td>8845150249</td>
+                <td>haneef@gmail.com</td>
+                <td>UK</td>
+                <td>Jinil</td>
+                <td><a href="{% url 'DocumentOfficer_UKDocuments' %}">
+                  <label class="badge badge-warning">More</label></td>
+                </a>
+              </tr>
+             
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+
+
+{% endblock %}

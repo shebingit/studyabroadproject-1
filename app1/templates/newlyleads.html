@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title" style="text-align:center">Newly Assign Leads</h4>
+        <form>
+          <div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name" style="color:rgb(7, 6, 6);">
+          </div>
+      </form>
+        </p>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Contact
+                </th>
+                <th>
+                  Email
+                </th>
+                <th>
+                  Country
+                </th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr>
+                  <td class="py-1">
+                    <a href="#" style="margin-left:20px;text-decoration:none;color: black;">
+                        <p><span><img src="static/images/faces/face3.jpg" alt="image" /></span> Angelica Fernandez
+                        </p>
+                    </a>
+                </td>
+                <td>
+                    9462347896
+                </td>
+                <td>
+                 beck@gmail.com
+                </td>
+                <td>
+                  UK
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="#" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face12.jpg" alt="image" /></span> Vasquez
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    7845632189
+                </td>
+                <td>
+                  messyadam@gmail.com
+                </td>
+                <td>
+                  CANADA
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="#" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face15.jpg" alt="image" /></span> Harinarayanan
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    784563278932
+                </td>
+                <td>
+                  richardjohns@gmail.com
+                </td>
+                <td>
+                  UK
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="#" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face18.jpg" alt="image" /></span> Christopher
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    75563278932
+                </td>
+                <td>
+                 petermaggik@gmail.com
+                </td>
+                <td>
+                  CANADA
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="#" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face21.jpg" alt="image" /></span> Aby Mathews
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    784578565
+                </td>
+                <td>
+                  edward@gmail.com
+                </td>
+                <td>
+                  UK
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="#" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face25.jpg" alt="image" /></span>Hextor Beck
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    4563218975
+                </td>
+                <td>
+                 johndoe@gmail.com
+                </td>
+                <td>
+                  CANADA
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="#" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face22.jpg" alt="image" /></span> John Doe
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    456327896
+                </td>
+                <td>
+                 herytom45@gmail.com
+                </td>
+                <td>
+                  CANADA
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+{% endblock %}

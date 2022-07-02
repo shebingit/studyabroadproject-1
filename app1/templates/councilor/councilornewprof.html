@@ -1,0 +1,173 @@
+{% extends 'councilor/base1.html' %}
+{% block content %}
+<!-- Bootstrap CSS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="container-fluid ">
+    <div class="row mb-5 ">
+        <div id="prof" class="col-md-4 col-sm-12 my-2">
+            <div class="h-100" style="background-color: #ffffff;border: hidden;border-radius: 13px;">
+                <h4 class="text-center py-3 fs-2 fw-bold" style="font-weight: bold;">PROFILE</h4>
+                <div class="text-center">
+                    <img src="https://thumbs.dreamstime.com/b/portrait-smart-male-profile-symbol-minimal-cartoon-style-166146853.jpg"
+                        alt="prof" class="w-50 rounded-circle">
+                </div>
+                <div class="text-center py-3 fs-3 font-monospace">
+                    <h6 class=" fs-6 py-2">Joining date: 20/05/2022</h6>
+                    <h6 class=" fs-6 py-2">Designation:Canadite</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-12 float-end my-2">
+            <div class="h-100" style="background-color: #ffffff;border: hidden;border-radius: 13px;">
+                <div class="p-3 fw-bold">
+
+                    <div class="card-body">
+                        <div class="d-flex flex-row justify-content-between">
+                            <p class="text-muted mb-1">Your data status</p>
+                        </div>
+                        <div class="row p-3 mt-3">
+                            <div class="col-12">
+                                <div class="preview-list">
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                  <div class="preview-icon bg-primary">
+                    <i class="mdi mdi-file-document"></i>
+                  </div>
+                </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow fw-bold">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold" style="font-weight: bold;">NAME</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+
+                                                <h6 class="preview-subject ">Dilshad</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="mdi mdi-clock"></i>
+                  </div>
+                </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold" style="font-weight: bold;">EMAIL</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+                                                <h6 class="preview-subject ">dlz611606@gmail.com</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                  <div class="preview-icon bg-danger">
+                    <i class="mdi mdi-email-open"></i>
+                  </div>
+                </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold" style="font-weight: bold;">CONTACT</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+                                                <h6 class="preview-subject ">8086611606</h6>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                  <div class="preview-icon bg-danger">
+                    <i class="mdi mdi-email-open"></i>
+                  </div>
+                </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold" style="font-weight: bold;">Adress</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+                                                <h6 class="preview-subject ">Vally,street,malibu-point</h6>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+          <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">More Details</h4>
+                <p class="card-description">
+                  
+                </p>
+                <form class="forms-sample">
+                  <div class="form-group">
+                    <label for="exampleInputName1"><b>Course Preference<b></label>
+                
+                    <input type="text" class="form-control" value="MBA" name="text" id="exampleInputName1" placeholder="Name" disabled="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail3">Contry</label>
+                    <input type="text" class="form-control" value="UK" id="exampleInputEmail3" disabled="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword4">College Preference</label>
+                    <input type="text" class="form-control"  value="Sa'i'd Business School(Oxford University)" id="exampleInputPassword4" disabled="">
+                  </div>
+                  
+                  
+                  <div class="form-group">
+                    <label for="exampleInputCity1">City</label>
+                    <input type="text" class="form-control"  value="London"  id="exampleInputCity1" placeholder="Location" disabled="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputCity1">IELTS Score</label>
+                    <input type="text" class="form-control"  value=".7"  id="exampleInputCity1" placeholder="Location" disabled="">
+                  </div>
+                  
+                  
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+
+        
+    </section>
+</body>
+{% endblock %}

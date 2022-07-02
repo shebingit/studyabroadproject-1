@@ -1,0 +1,199 @@
+{% extends 'councilor/base1.html' %}
+{% block content %}
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title" style="text-align:center">Newly Assigned Leads</h4>
+        <form>
+          <div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name" style="color:rgb(7, 6, 6);">
+          </div>
+      </form>
+        </p>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>
+                  Name
+                </th>
+                <th>
+                   Email
+                </th>
+                <th>
+                    Contact
+                </th>
+                <th>
+                  Contry
+                </th>
+                <th>
+                   Action
+                </th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr>
+                  <td class="py-1">
+                    <a href="{% url 'councilornewlyprofile' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                        <p><span><img src="static/images/faces/face3.jpg" alt="image" /></span> Angelica Fernandez
+                        </p>
+                    </a>
+                </td>
+                <td>
+                    beck@gmail.com
+                </td>
+                <td>
+                 957453663366
+                </td>
+                <td>
+                  UK
+                </td>
+                <td>
+                    <a href="{% url 'currentleads' %}"><button type="button" class="btn btn-primary rounded-pill">Accept</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger rounded-pill">Reject</button></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="{% url 'councilornewlyprofile' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face12.jpg" alt="image" /></span> Vasquez
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    messyadam@gmail.com
+                </td>
+                <td>
+                 8674553443
+                </td>
+                <td>
+                  CANADA
+                </td>
+                <td>
+                    <a href="{% url 'currentleads' %}"><button type="button" class="btn btn-primary rounded-pill">Accept</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger rounded-pill">Reject</button></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="{% url 'councilornewlyprofile' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face15.jpg" alt="image" /></span> Harinarayanan
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    richardjohns@gmail.com
+                </td>
+                <td>
+                  67894655343
+                </td>
+                <td>
+                  CANADA
+                </td>
+                <td>
+                    <a href="{% url 'currentleads' %}"><button type="button" class="btn btn-primary rounded-pill">Accept</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger rounded-pill">Reject</button></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="{% url 'councilornewlyprofile' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face18.jpg" alt="image" /></span> Christopher
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    petermaggik@gmail.com
+                </td>
+                <td>
+                 8674554542
+                </td>
+                <td>
+                  CANADA
+                </td>
+                <td>
+                    <a href="{% url 'currentleads' %}"><button type="button" class="btn btn-primary rounded-pill">Accept</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger rounded-pill">Reject</button></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="{% url 'councilornewlyprofile' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face21.jpg" alt="image" /></span> Aby Mathews
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    edward@gmail.com
+                </td>
+                <td>
+                  9867745465
+                </td>
+                <td>
+                  CANADA
+                </td>
+                <td>
+                    <a href="{% url 'currentleads' %}"><button type="button" class="btn btn-primary rounded-pill">Accept</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger rounded-pill">Reject</button></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="{% url 'councilornewlyprofile' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face25.jpg" alt="image" /></span>Hextor Beck
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    johndoe@gmail.com
+                </td>
+                <td>
+                 9788677577575
+                </td>
+                <td>
+                  CANADA
+                </td>
+                <td>
+                    <a href="{% url 'currentleads' %}"><button type="button" class="btn btn-primary rounded-pill">Accept</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger rounded-pill">Reject</button></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-1">
+                  <a href="{% url 'councilornewlyprofile' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                      <p><span><img src="static/images/faces/face22.jpg" alt="image" /></span> John Doe
+                      </p>
+                  </a>
+              </td>
+                <td>
+                    herytom45@gmail.com
+                </td>
+                <td>
+                87764554453
+                </td>
+                <td>
+                  UK
+                </td>
+                <td>
+                    <a href="{% url 'currentleads' %}"><button type="button" class="btn btn-primary rounded-pill">Accept</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger rounded-pill">Reject</button></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+{% endblock %}

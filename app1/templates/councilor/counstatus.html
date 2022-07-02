@@ -1,0 +1,314 @@
+{% extends "councilor/base1.html" %}
+{% block content %}
+
+<!-- Bootstrap CSS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="container-fluid ">
+    <div class="row mb-5 ">
+        <div id="prof" class="col-md-4 col-sm-12 my-2">
+            <div class="h-100" style="background-color: #ffffff;border: hidden;border-radius: 13px;">
+                <h4 class="text-center py-3 fs-2 fw-bold" style="font-weight: bold;">PROFILE</h4>
+                <div class="text-center">
+                    <img src="https://thumbs.dreamstime.com/b/portrait-smart-male-profile-symbol-minimal-cartoon-style-166146853.jpg"
+                        alt="prof" class="w-50 rounded-circle">
+                </div>
+                <div class="text-center py-3 fs-3 font-monospace">
+                    <h6 class=" fs-6 py-2">Joining date: 20/05/2022</h6>
+                    <h6 class=" fs-6 py-2">Designation:Canadite</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-12 float-end my-2">
+            <div class="h-100" style="background-color: #ffffff;border: hidden;border-radius: 13px;">
+                <div class="p-3 fw-bold">
+
+                    <div class="card-body">
+                        <div class="d-flex flex-row justify-content-between">
+                            <p class="text-muted mb-1">Your data status</p>
+                        </div>
+                        <div class="row p-3 mt-3">
+                            <div class="col-12">
+                                <div class="preview-list">
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                  <div class="preview-icon bg-primary">
+                    <i class="mdi mdi-file-document"></i>
+                  </div>
+                </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow fw-bold">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold" style="font-weight: bold;">NAME</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+
+                                                <h6 class="preview-subject ">Dilshad</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="mdi mdi-clock"></i>
+                  </div>
+                </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold" style="font-weight: bold;">EMAIL</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+                                                <h6 class="preview-subject ">dlz611606@gmail.com</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                  <div class="preview-icon bg-danger">
+                    <i class="mdi mdi-email-open"></i>
+                  </div>
+                </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold" style="font-weight: bold;">CONTACT</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+                                                <h6 class="preview-subject ">8086611606</h6>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                  <div class="preview-icon bg-danger">
+                    <i class="mdi mdi-email-open"></i>
+                  </div>
+                </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold" style="font-weight: bold;">Adress</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+                                                <h6 class="preview-subject ">Vally,street,malibu-point</h6>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="container px-1 px-md-4  mx-auto">
+    <div class="card">
+
+        <!-- Add class 'active' to progress -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 col-12">
+                <ul id="progressbar" class="text-center">
+                    <li class="active step0"></li>
+                    <li class="active step0"></li>
+                    <li class="active step0"></li>
+                    <li class="active step0"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-between top">
+            <div class="row d-flex icon-content ">
+                <p class="py-2 mx-2"><i class="fa fa-phone" style="font-size:36px"></i></p>
+
+                <div class="d-sm-none d-md-block">
+                    <p class="font-weight-bold">Enquiry &<br>Application</p>
+                </div>
+            </div>
+            <div class="row d-flex icon-content">
+                <!-- <img src="https://i.imgur.com/u1AzR7w.png"> -->
+                <p class="py-2 mx-2"><i class="fa fa-laptop" style="font-size:36px"></i></p>
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Verifiying<br>Documents</p>
+                </div>
+            </div>
+            <div class="row d-flex icon-content">
+                <!-- <img class="icon" src="https://i.imgur.com/TkPm63y.png"> -->
+                <p class="py-2 mx-2"><i class="fa fa-paper-plane" style="font-size:30px"></i></p>
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Applying<br>Course</p>
+                </div>
+            </div>
+            <div class="row d-flex icon-content">
+                <!-- <img class="icon" src="https://i.imgur.com/HdsziHP.png"> -->
+                <p class="py-2 mx-2"><i class="fa fa-hourglass-2" style="font-size:36px"></i></p>
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Visa<br>Approved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    td {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /*
+    body {
+        color: #000;
+        overflow-x: hidden;
+        height: 100%;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+    }*/
+
+    .card {
+        z-index: 0;
+        background-color: #ECEFF1;
+        padding-bottom: 20px;
+        margin-top: 90px;
+        margin-bottom: 90px;
+        border-radius: 10px;
+    }
+
+    .top {
+        padding-top: 40px;
+        padding-left: 13% !important;
+        padding-right: 13% !important;
+    }
+
+    /*Icon progressbar*/
+    #progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        color: #455A64;
+        padding-left: 0px;
+        margin-top: 30px;
+    }
+
+    #progressbar li {
+        list-style-type: none;
+        font-size: 13px;
+        width: 25%;
+        float: left;
+        position: relative;
+        font-weight: 400;
+    }
+
+    #progressbar .step0:before {
+        font-family: FontAwesome;
+        content: "\f10c";
+        color: #fff;
+    }
+
+    #progressbar li:before {
+        width: 40px;
+        height: 40px;
+        line-height: 45px;
+        display: block;
+        font-size: 20px;
+        background: #C5CAE9;
+        border-radius: 50%;
+        margin: auto;
+        padding: 0px;
+    }
+
+    /*ProgressBar connectors*/
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 12px;
+        background: #C5CAE9;
+        position: absolute;
+        left: 0;
+        top: 16px;
+        z-index: -1;
+    }
+
+    #progressbar li:last-child:after {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: absolute;
+        left: -50%;
+    }
+
+    #progressbar li:nth-child(2):after,
+    #progressbar li:nth-child(3):after {
+        left: -50%;
+    }
+
+    #progressbar li:first-child:after {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        position: absolute;
+        left: 50%;
+    }
+
+    #progressbar li:last-child:after {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #progressbar li:first-child:after {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    /*Color number of the step and the connector before it*/
+    #progressbar li.active:before,
+    #progressbar li.active:after {
+        background: #651FFF;
+    }
+
+    #progressbar li.active:before {
+        font-family: FontAwesome;
+        content: "\f00c";
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+
+    .icon-content {
+        padding-bottom: 20px;
+    }
+
+    @media screen and (max-width: 992px) {
+        .icon-content {
+            width: 50%;
+        }
+    }
+
+    
+</style>
+{% endblock content %}

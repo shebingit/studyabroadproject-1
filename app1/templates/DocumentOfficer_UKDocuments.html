@@ -1,0 +1,200 @@
+{% extends 'DocumentOfficer_index.html'%} {% load static %} {% block content %}
+
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <!-- <p class="card-description">
+          Basic form elements
+        </p> -->
+                <div class="container" id="c1">
+                    <form class="forms-sample">
+                        <div id="form1">
+                            <h4 class="card-title">Information</h4>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Lead Sources</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Lead Sources" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Phone</label>
+                                <input type="number" class="form-control" id="exampleInputPassword4" placeholder="Phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Place</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Place" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Academic Details</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Academic Details" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Email</label>
+                                <input type="email" class="form-control" id="exampleInputPassword4" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Course Preference</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Course Preference" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Country Preference</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Country Preference" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Intake</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Country Preference" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">College Preference</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="College Preference" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Feedback</label>
+                                <textarea raw="3" class="form-control" id="exampleInputPassword4" placeholder="Feedback" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Last Follow Up</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Last Follow Up" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Next Follow Up</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Next Follow Up" required>
+                            </div>
+                            <button type="button" onclick="fun1()" id="btn1" class="btn btn-primary" style="float:right;">Next</button>
+                        </div>
+
+                        <div id="form2">
+                            <h4 class="card-title">Documents</h4>
+                            <div class="form-group">
+                                <label for="exampleInputName1">10th Certificate</label>
+                                <input type="file" name="img[]" class="file-upload-default" required>
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled placeholder="10th Certificate" required>
+                                    <span class="input-group-append">
+                  <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">12th Certificate</label>
+                                <input type="file" name="img[]" class="file-upload-default" required>
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled placeholder="12th Certificate" required>
+                                    <span class="input-group-append">
+                  <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Degree/Diploma/Passport/IELTS</label>
+                                <input type="file" name="img[]" class="file-upload-default" required>
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" required disabled placeholder="Degree/Diploma/Passport/IELTS">
+                                    <span class="input-group-append">
+                      <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                    </span>
+                                </div>
+                            </div>
+                            <h4 class="card-title">Student Profile and Documents</h4>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Course Details</label>
+                                <input type="text" class="form-control" required id="exampleInputPassword4" placeholder="Course Details">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">College Details</label>
+                                <input type="file" name="img[]" class="file-upload-default" required>
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" required disabled placeholder="Upload College Details">
+                                    <span class="input-group-append">
+                      <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Student Documents</label>
+                                <input type="file" name="img[]" class="file-upload-default" required>
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" required disabled placeholder="Upload Student Documents">
+                                    <span class="input-group-append">
+                      <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Transaction Details</label>
+                                <input type="file" name="img[]" class="file-upload-default" required>
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" required disabled placeholder="Upload Transaction Details">
+                                    <span class="input-group-append">
+                      <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                    </span>
+                                </div>
+                            </div>
+                            <center>
+                                <div class=" mt-5">
+
+                                    <button type="button" class="btn btn-primary" onclick="bfun1()" id="bbtn1" class="btn btn-light">Back</button>
+                                    <button type="button" onclick="fun2()" id="btn1" class="btn btn-success ml-3">Submit</button>
+                                </div>
+                            </center>
+                        </div>
+
+                    </form>
+
+
+
+                    <script>
+                        var form1 = document.getElementById("form1");
+                        var form2 = document.getElementById("form2");
+                        var form3 = document.getElementById("form3");
+                        var form4 = document.getElementById("form4");
+                        var c1 = document.getElementById("c1");
+                        form2.style.display = "none";
+                        form3.style.display = "none";
+                        form4.style.display = "none";
+
+
+
+                        function fun1() {
+
+                            // c1.style.height = '1320px';
+                            form1.style.display = "none";
+                            form2.style.display = "block";
+                            form3.style.display = "none";
+                            form4.style.display = "none";
+
+                        }
+
+                        function bfun1() {
+
+                            // c1.style.height = '2320px';
+                            form1.style.display = "block";
+                            form2.style.display = "none";
+                            form3.style.display = "none";
+
+                        }
+
+                        function fun2() {
+
+                            // c1.style.height = "1530px";
+                            form1.style.display = "none";
+                            form2.style.display = "block";
+                            form3.style.display = "none";
+
+                        }
+
+                        function bfun2() {
+
+                            // c1.style.height = '1320px';
+                            form1.style.display = "none";
+                            form2.style.display = "block";
+                            form3.style.display = "none";
+
+                        }
+                    </script>
+
+
+                    {% endblock %}
