@@ -78,7 +78,7 @@
                                 <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
                             </td>
                             <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill">Complete</button></a>
+                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
                             </td>
                             
                         </tr>
@@ -116,7 +116,7 @@
                                 <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
                             </td>
                             <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill">Complete</button></a>
+                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
                             </td>
                             
                         </tr>
@@ -155,7 +155,7 @@
                                 <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
                             </td>
                             <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill">Complete</button></a>
+                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
                             </td>
                             
                         </tr>
@@ -194,7 +194,7 @@
                                 <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
                             </td>  
                             <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill">Complete</button></a>
+                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
                             </td>                          
                         </tr>
                         <tr>
@@ -233,7 +233,7 @@
                                 <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
                             </td>
                             <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill">Complete</button></a>
+                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
                             </td>
                         </tr>
                         <tr>
@@ -271,7 +271,7 @@
                                 <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
                             </td>
                             <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill">Complete</button></a>
+                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
                             </td>
                             
                         </tr>
@@ -400,7 +400,19 @@
     document.getElementById("txtarea5").style.visibility = "hidden";
     document.getElementById("addbtn5").style.visibility = "hidden";
         
-    }              
+    }    
+    function popup(){
+    var userPreference;
+
+if (confirm("Do you want to complete the Process?") == true) {
+    userPreference = "Data saved successfully!";
+} else {
+    userPreference = "Save Canceled!";
+}
+
+document.getElementById("msg").innerHTML = userPreference; 
+    }
+         
 </script>
 </body>
 {% endblock content %}
