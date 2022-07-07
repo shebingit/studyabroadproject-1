@@ -1,418 +1,424 @@
-{% extends "councilor/base1.html" %}
-{% block content %}
-<body onload="showtype(),showtype1(),showtype2(),showtype3(),showtype4(),showtype5()">
-<div class="col-lg-12 grid-margin stretch-card">
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title" style="text-align:center">Current Leads</h4>
-            <form>
-                <div class="input-group input-group-sm mb-3">
-                    <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name" style="color:rgb(7, 6, 6);">
-                </div>
-            </form>
-            </p>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>
-                                Name
-                            </th>
-                            <th>
-                                Contact
-                            </th>
-                            <th>
-                                Email
-                            </th>
-                            <th>
-                                Country
-                            </th>
-                            <th>
-                                Status
-                            </th> 
-                            <th>
-                                Reason
-                            </th>   
-                            <th>
-                                Document Handover
-                            </th>
-                            <th>
-                                Complete
-                            </th>                          
-                        </tr>
-                    </thead>
-                    <tbody id="myTable" >
-                        <tr>
-                            <td class="py-1">
+{% extends "councilor/base1.html" %} {% block content %}
 
-                                <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
-                                    <p><span><img src="static/images/faces/face19.jpg" alt="image" /></span> Herman Beck
-                                    </p>
-                                </a>
-                            </td>
-                            <td>
-                                9462347896
-                            </td>
-                            <td>
-                                beck@gmail.com
-                            </td>
-                            <td>
-                               uk
-                            </td>
-                            <td >
-                                <select class="form-select form-select-sm btn btn-primary btn-sm" id="status" onclick="showtype()">
+<body onload="showtype(),showtype1(),showtype2(),showtype3(),showtype4(),showtype5()">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="text-align:center">Current Leads</h4>
+                <form>
+                    <div class="input-group input-group-sm mb-3">
+                        <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name" style="color:rgb(7, 6, 6);">
+                    </div>
+                </form>
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Contact
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Country
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Reason
+                                </th>
+                                <th>
+                                    Document Handover
+                                </th>
+                                <th>
+                                    Complete
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                            <tr>
+                                <td class="py-1">
+
+                                    <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                                        <p><span><img src="static/images/faces/face19.jpg" alt="image" /></span> Herman Beck
+                                        </p>
+                                    </a>
+                                </td>
+                                <td>
+                                    9462347896
+                                </td>
+                                <td>
+                                    beck@gmail.com
+                                </td>
+                                <td>
+                                    uk
+                                </td>
+                                <td>
+                                    <select class="form-select form-select-sm btn btn-primary btn-sm" id="status" onclick="showtype()">
                                     aria-label=".form-select-sm example">
                                     <option selected value="1">Select</option>
                                     <option value="0" >Waiting</option>
                                     <option value="1" >On Process</option>
                                 </select>
 
-                            </td>
-                            <td>
-                                <div id="adduserdata"></div>
-                                <textarea id="txtarea"  cols="30" rows="3" ></textarea>
-                                <button id='addbtn'type="button" class="btn btn-danger rounded-pill" onclick="showtext()">Submit</button>
+                                </td>
+                                <td>
+                                    <div id="adduserdata"></div>
+                                    <textarea id="txtarea" cols="20" rows="3"></textarea>
+                                    <button id='addbtn' type="button" class="btn btn-danger rounded-pill" onclick="showtext()">Submit</button>
 
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
-                            </td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="py-1">
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
+                                </td>
 
-                                <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
-                                    <p><span><img src="static/images/faces/face18.jpg" alt="image" /></span> Messsy Adam
-                                    </p>
-                                </a>
-                            </td>
-                            <td>
-                                7845632189
-                            </td>
-                            <td>
-                                messyadam@gmail.com
-                            </td>
-                            <td>
-                                uk
-                            </td>
-                            <td>
-                                <select class="form-select form-select-sm btn btn-primary btn-sm" id="status1" onclick="showtype1()">
+                            </tr>
+                            <tr>
+                                <td class="py-1">
+
+                                    <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                                        <p><span><img src="static/images/faces/face18.jpg" alt="image" /></span> Messsy Adam
+                                        </p>
+                                    </a>
+                                </td>
+                                <td>
+                                    7845632189
+                                </td>
+                                <td>
+                                    messyadam@gmail.com
+                                </td>
+                                <td>
+                                    uk
+                                </td>
+                                <td>
+                                    <select class="form-select form-select-sm btn btn-primary btn-sm" id="status1" onclick="showtype1()">
                                     aria-label=".form-select-sm example">
                                     <option selected>Select</option>
                                     <option value="0">Waiting</option>
                                     <option value="1" >On Process</option>
                                 </select>
-                            </td>
-                            <td>
-                                <div id="adduserdata1"></div>
-                                <textarea id="txtarea1"  cols="30" rows="3"></textarea>
-                                <button id='addbtn1'type="button" class="btn btn-danger rounded-pill" onclick="showtext1()">Submit</button>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
-                            </td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="py-1">
+                                </td>
+                                <td>
+                                    <div id="adduserdata1"></div>
+                                    <textarea id="txtarea1" cols="20" rows="3"></textarea>
+                                    <button id='addbtn1' type="button" class="btn btn-danger rounded-pill" onclick="showtext1()">Submit</button>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
+                                </td>
 
-                                <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
-                                    <p><span><img src="static/images/faces/face17.jpg" alt="image" /></span> John
-                                        Richards
-                                    </p>
-                                </a>
-                            </td>
-                            <td>
-                                784563278932
-                            </td>
-                            <td>
-                                richardjohns@gmail.com
-                            </td>
-                            <td>
-                                uk
-                            </td>
-                            <td>
-                                <select class="form-select form-select-sm btn btn-primary btn-sm" id="status2" onclick="showtype2()">
+                            </tr>
+                            <tr>
+                                <td class="py-1">
+
+                                    <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                                        <p><span><img src="static/images/faces/face17.jpg" alt="image" /></span> John Richards
+                                        </p>
+                                    </a>
+                                </td>
+                                <td>
+                                    784563278932
+                                </td>
+                                <td>
+                                    richardjohns@gmail.com
+                                </td>
+                                <td>
+                                    uk
+                                </td>
+                                <td>
+                                    <select class="form-select form-select-sm btn btn-primary btn-sm" id="status2" onclick="showtype2()">
                                     aria-label=".form-select-sm example">
                                     <option selected>Select</option>
                                     <option value="0">Waiting</option>
                                     <option value="1" >On Process</option>
                                 </select>
-                            </td>
-                            <td>
-                                <div id="adduserdata2"></div>
-                                <textarea id="txtarea2"  cols="30" rows="3"></textarea>
-                                <button id='addbtn2'type="button" class="btn btn-danger rounded-pill" onclick="showtext2()">Submit</button>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
-                            </td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="py-1">
+                                </td>
+                                <td>
+                                    <div id="adduserdata2"></div>
+                                    <textarea id="txtarea2" cols="20" rows="3"></textarea>
+                                    <button id='addbtn2' type="button" class="btn btn-danger rounded-pill" onclick="showtext2()">Submit</button>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
+                                </td>
 
-                                <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
-                                    <p><span><img src="static/images/faces/face16.jpg" alt="image" /></span> Peter
-                                        Meggik
-                                    </p>
-                                </a>
-                            </td>
-                            <td>
-                                75563278932
-                            </td>
-                            <td>
-                                petermaggik@gmail.com
-                            </td>
-                            <td>
-                                UK
-                            </td>
-                            <td>
-                                <select class="form-select form-select-sm btn btn-primary btn-sm" id="status3" onclick="showtype3()">
+                            </tr>
+                            <tr>
+                                <td class="py-1">
+
+                                    <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                                        <p><span><img src="static/images/faces/face16.jpg" alt="image" /></span> Peter Meggik
+                                        </p>
+                                    </a>
+                                </td>
+                                <td>
+                                    75563278932
+                                </td>
+                                <td>
+                                    petermaggik@gmail.com
+                                </td>
+                                <td>
+                                    UK
+                                </td>
+                                <td>
+                                    <select class="form-select form-select-sm btn btn-primary btn-sm" id="status3" onclick="showtype3()">
                                     aria-label=".form-select-sm example">
                                     <option selected>Select</option>
                                     <option value="0">Waiting</option>
                                     <option value="1" >On Process</option>
                                 </select>
-                            </td>
-                            <td>
-                                <div id="adduserdata3"></div>
-                                <textarea id="txtarea3"  cols="30" rows="3"></textarea>
-                                <button id='addbtn3'type="button" class="btn btn-danger rounded-pill" onclick="showtext3()">Submit</button>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
-                            </td>  
-                            <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
-                            </td>                          
-                        </tr>
-                        <tr>
-                            <td class="py-1">
+                                </td>
+                                <td>
+                                    <div id="adduserdata3"></div>
+                                    <textarea id="txtarea3" cols="20" rows="3"></textarea>
+                                    <button id='addbtn3' type="button" class="btn btn-danger rounded-pill" onclick="showtext3()">Submit</button>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-1">
 
-                                <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
-                                    <p><span><img src="static/images/faces/face15.jpg" alt="image" /></span> Edward
-                                        Joseph
-                                    </p>
-                                </a>
-                            </td>
-                            <td>
-                                784578565
-                            </td>
-                            <td>
-                                edward@gmail.com
-                            </td>
-                            <td>
-                                CANADA
-                            </td>
-                            <td>
-                                <select class="form-select form-select-sm btn btn-primary btn-sm" id="status4" onclick="showtype4()">
-                                    aria-label=".form-select-sm example">
-                                    <option selected>Select</option>
-                                    <option value="0">Waiting</option>
-                                    <option value="1" >On Process</option>
-                                </select>
-
-                            </td>
-                            <td>
-                                <div id="adduserdata4"></div>
-                                <textarea id="txtarea4"  cols="30" rows="3"></textarea>
-                                <button id='addbtn4'type="button" class="btn btn-danger rounded-pill" onclick="showtext4()">Submit</button>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-1">
-
-                                <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
-                                    <p><span><img src="static/images/faces/face14.jpg" alt="image" /></span> John Philip
-                                    </p>
-                                </a>
-                            </td>
-                            <td>
-                                4563218975
-                            </td>
-                            <td>
-                                johndoe@gmail.com
-                            </td>
-                            <td>
-                                CANADA
-                            </td>
-                            <td>
-                                <select class="form-select form-select-sm btn btn-primary btn-sm" id="status5" onclick="showtype5()">
+                                    <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                                        <p><span><img src="static/images/faces/face15.jpg" alt="image" /></span> Edward Joseph
+                                        </p>
+                                    </a>
+                                </td>
+                                <td>
+                                    784578565
+                                </td>
+                                <td>
+                                    edward@gmail.com
+                                </td>
+                                <td>
+                                    CANADA
+                                </td>
+                                <td>
+                                    <select class="form-select form-select-sm btn btn-primary btn-sm" id="status4" onclick="showtype4()">
                                     aria-label=".form-select-sm example">
                                     <option selected>Select</option>
                                     <option value="0">Waiting</option>
                                     <option value="1" >On Process</option>
                                 </select>
 
-                            </td>
-                            <td>
-                                <div id="adduserdata5"></div>
-                                <textarea id="txtarea5"  cols="30" rows="3"></textarea>
-                                <button id='addbtn5'type="button" class="btn btn-danger rounded-pill" onclick="showtext5()">Submit</button>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
-                            </td>
-                            <td>
-                                <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
-                            </td>
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
+                                </td>
+                                <td>
+                                    <div id="adduserdata4"></div>
+                                    <textarea id="txtarea4" cols="20" rows="3"></textarea>
+                                    <button id='addbtn4' type="button" class="btn btn-danger rounded-pill" onclick="showtext4()">Submit</button>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-1">
+
+                                    <a href="{% url 'status2' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                                        <p><span><img src="static/images/faces/face14.jpg" alt="image" /></span> John Philip
+                                        </p>
+                                    </a>
+                                </td>
+                                <td>
+                                    4563218975
+                                </td>
+                                <td>
+                                    johndoe@gmail.com
+                                </td>
+                                <td>
+                                    CANADA
+                                </td>
+                                <td>
+                                    <select class="form-select form-select-sm btn btn-primary btn-sm" id="status5" onclick="showtype5()">
+                                    aria-label=".form-select-sm example">
+                                    <option selected>Select</option>
+                                    <option value="0">Waiting</option>
+                                    <option value="1" >On Process</option>
+                                </select>
+
+                                </td>
+                                <td>
+                                    <div id="adduserdata5"></div>
+                                    <textarea id="txtarea5" cols="20" rows="3"></textarea>
+                                    <button id='addbtn5' type="button" class="btn btn-danger rounded-pill" onclick="showtext5()">Submit</button>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_newly_assigned_leads' %}"><button type="button" class="btn btn-info rounded-pill">Document Handover</button></a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'DocumentOfficer_Previous_leads' %}"><button type="button" class="btn btn-success rounded-pill" id="msg" onclick="popup()">Complete</button></a>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    function showtype(){
-    var selectBox = document.getElementById("status");
-    var selected = selectBox.options[selectBox.selectedIndex].value;
-    if (selected=='0'){
-    document.getElementById("txtarea").style.visibility = "visible";
-    document.getElementById("addbtn").style.visibility = "visible";
-    }
-    else{
-        document.getElementById("txtarea").style.visibility = "hidden";
-    document.getElementById("addbtn").style.visibility = "hidden";
-    }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function showtype() {
+            var selectBox = document.getElementById("status");
+            var selected = selectBox.options[selectBox.selectedIndex].value;
+            if (selected == '0') {
+                document.getElementById("txtarea").style.visibility = "visible";
+                document.getElementById("addbtn").style.visibility = "visible";
+            } else {
+                document.getElementById("txtarea").style.visibility = "hidden";
+                document.getElementById("addbtn").style.visibility = "hidden";
+            }
 
-    }
-    function showtype1(){
-    var selectBox = document.getElementById("status1");
-    var selected = selectBox.options[selectBox.selectedIndex].value;
-    if (selected=='0'){
-    document.getElementById("txtarea1").style.visibility = "visible";
-    document.getElementById("addbtn1").style.visibility = "visible";
-    }
-    else{
-        document.getElementById("txtarea1").style.visibility = "hidden";
-    document.getElementById("addbtn1").style.visibility = "hidden";
-    }}
-    function showtype2(){
-    var selectBox = document.getElementById("status2");
-    var selected = selectBox.options[selectBox.selectedIndex].value;
-    if (selected=='0'){
-    document.getElementById("txtarea2").style.visibility = "visible";
-    document.getElementById("addbtn2").style.visibility = "visible";
-    }
-    else{
-        document.getElementById("txtarea2").style.visibility = "hidden";
-    document.getElementById("addbtn2").style.visibility = "hidden";
-    }}
-    function showtype3(){
-    var selectBox = document.getElementById("status3");
-    var selected = selectBox.options[selectBox.selectedIndex].value;
-    if (selected=='0'){
-    document.getElementById("txtarea3").style.visibility = "visible";
-    document.getElementById("addbtn3").style.visibility = "visible";
-    }
-    else{
-        document.getElementById("txtarea3").style.visibility = "hidden";
-    document.getElementById("addbtn3").style.visibility = "hidden";
-    }}
-    function showtype4(){
-    var selectBox = document.getElementById("status4");
-    var selected = selectBox.options[selectBox.selectedIndex].value;
-    if (selected=='0'){
-    document.getElementById("txtarea4").style.visibility = "visible";
-    document.getElementById("addbtn4").style.visibility = "visible";
-    }
-    else{
-        document.getElementById("txtarea4").style.visibility = "hidden";
-    document.getElementById("addbtn4").style.visibility = "hidden";
-    }}
-    function showtype5(){
-    var selectBox = document.getElementById("status5");
-    var selected = selectBox.options[selectBox.selectedIndex].value;
-    if (selected=='0'){
-    document.getElementById("txtarea5").style.visibility = "visible";
-    document.getElementById("addbtn5").style.visibility = "visible";
-    }
-    else{
-        document.getElementById("txtarea5").style.visibility = "hidden";
-    document.getElementById("addbtn5").style.visibility = "hidden";
-    }}
+        }
 
-    function showtext(){
-    var text = document.getElementById("txtarea");
-    var showarea = document.getElementById("adduserdata");
-    showarea.innerHTML=text.value;
-    document.getElementById("txtarea").style.visibility = "hidden";
-    document.getElementById("addbtn").style.visibility = "hidden";
-        
-    }
-    function showtext1(){
-    var text = document.getElementById("txtarea1");
-    var showarea = document.getElementById("adduserdata1");
-    showarea.innerHTML=text.value;
-    document.getElementById("txtarea1").style.visibility = "hidden";
-    document.getElementById("addbtn1").style.visibility = "hidden";
-        
-    } 
-    function showtext2(){
-    var text = document.getElementById("txtarea2");
-    var showarea = document.getElementById("adduserdata2");
-    showarea.innerHTML=text.value;
-    document.getElementById("txtarea2").style.visibility = "hidden";
-    document.getElementById("addbtn2").style.visibility = "hidden";
-        
-    } 
-    function showtext3(){
-    var text = document.getElementById("txtarea3");
-    var showarea = document.getElementById("adduserdata3");
-    showarea.innerHTML=text.value;
-    document.getElementById("txtarea3").style.visibility = "hidden";
-    document.getElementById("addbtn3").style.visibility = "hidden";
-        
-    }  
-    function showtext4(){
-    var text = document.getElementById("txtarea4");
-    var showarea = document.getElementById("adduserdata4");
-    showarea.innerHTML=text.value;
-    document.getElementById("txtarea4").style.visibility = "hidden";
-    document.getElementById("addbtn4").style.visibility = "hidden";
-        
-    }  
-    function showtext5(){
-    var text = document.getElementById("txtarea5");
-    var showarea = document.getElementById("adduserdata5");
-    showarea.innerHTML=text.value;
-    document.getElementById("txtarea5").style.visibility = "hidden";
-    document.getElementById("addbtn5").style.visibility = "hidden";
-        
-    }    
-    function popup(){
-    var userPreference;
+        function showtype1() {
+            var selectBox = document.getElementById("status1");
+            var selected = selectBox.options[selectBox.selectedIndex].value;
+            if (selected == '0') {
+                document.getElementById("txtarea1").style.visibility = "visible";
+                document.getElementById("addbtn1").style.visibility = "visible";
+            } else {
+                document.getElementById("txtarea1").style.visibility = "hidden";
+                document.getElementById("addbtn1").style.visibility = "hidden";
+            }
+        }
 
-if (confirm("Do you want to complete the Process?") == true) {
-    userPreference = "Data saved successfully!";
-} else {
-    userPreference = "Save Canceled!";
-}
+        function showtype2() {
+            var selectBox = document.getElementById("status2");
+            var selected = selectBox.options[selectBox.selectedIndex].value;
+            if (selected == '0') {
+                document.getElementById("txtarea2").style.visibility = "visible";
+                document.getElementById("addbtn2").style.visibility = "visible";
+            } else {
+                document.getElementById("txtarea2").style.visibility = "hidden";
+                document.getElementById("addbtn2").style.visibility = "hidden";
+            }
+        }
 
-document.getElementById("msg").innerHTML = userPreference; 
-    }
-         
-</script>
+        function showtype3() {
+            var selectBox = document.getElementById("status3");
+            var selected = selectBox.options[selectBox.selectedIndex].value;
+            if (selected == '0') {
+                document.getElementById("txtarea3").style.visibility = "visible";
+                document.getElementById("addbtn3").style.visibility = "visible";
+            } else {
+                document.getElementById("txtarea3").style.visibility = "hidden";
+                document.getElementById("addbtn3").style.visibility = "hidden";
+            }
+        }
+
+        function showtype4() {
+            var selectBox = document.getElementById("status4");
+            var selected = selectBox.options[selectBox.selectedIndex].value;
+            if (selected == '0') {
+                document.getElementById("txtarea4").style.visibility = "visible";
+                document.getElementById("addbtn4").style.visibility = "visible";
+            } else {
+                document.getElementById("txtarea4").style.visibility = "hidden";
+                document.getElementById("addbtn4").style.visibility = "hidden";
+            }
+        }
+
+        function showtype5() {
+            var selectBox = document.getElementById("status5");
+            var selected = selectBox.options[selectBox.selectedIndex].value;
+            if (selected == '0') {
+                document.getElementById("txtarea5").style.visibility = "visible";
+                document.getElementById("addbtn5").style.visibility = "visible";
+            } else {
+                document.getElementById("txtarea5").style.visibility = "hidden";
+                document.getElementById("addbtn5").style.visibility = "hidden";
+            }
+        }
+
+        function showtext() {
+            var text = document.getElementById("txtarea");
+            var showarea = document.getElementById("adduserdata");
+            showarea.innerHTML = text.value;
+            document.getElementById("txtarea").style.visibility = "hidden";
+            document.getElementById("addbtn").style.visibility = "hidden";
+
+        }
+
+        function showtext1() {
+            var text = document.getElementById("txtarea1");
+            var showarea = document.getElementById("adduserdata1");
+            showarea.innerHTML = text.value;
+            document.getElementById("txtarea1").style.visibility = "hidden";
+            document.getElementById("addbtn1").style.visibility = "hidden";
+
+        }
+
+        function showtext2() {
+            var text = document.getElementById("txtarea2");
+            var showarea = document.getElementById("adduserdata2");
+            showarea.innerHTML = text.value;
+            document.getElementById("txtarea2").style.visibility = "hidden";
+            document.getElementById("addbtn2").style.visibility = "hidden";
+
+        }
+
+        function showtext3() {
+            var text = document.getElementById("txtarea3");
+            var showarea = document.getElementById("adduserdata3");
+            showarea.innerHTML = text.value;
+            document.getElementById("txtarea3").style.visibility = "hidden";
+            document.getElementById("addbtn3").style.visibility = "hidden";
+
+        }
+
+        function showtext4() {
+            var text = document.getElementById("txtarea4");
+            var showarea = document.getElementById("adduserdata4");
+            showarea.innerHTML = text.value;
+            document.getElementById("txtarea4").style.visibility = "hidden";
+            document.getElementById("addbtn4").style.visibility = "hidden";
+
+        }
+
+        function showtext5() {
+            var text = document.getElementById("txtarea5");
+            var showarea = document.getElementById("adduserdata5");
+            showarea.innerHTML = text.value;
+            document.getElementById("txtarea5").style.visibility = "hidden";
+            document.getElementById("addbtn5").style.visibility = "hidden";
+
+        }
+
+        function popup() {
+            var userPreference;
+
+            if (confirm("Do you want to complete the Process?") == true) {
+                userPreference = "Data saved successfully!";
+            } else {
+                userPreference = "Save Canceled!";
+            }
+
+            document.getElementById("msg").innerHTML = userPreference;
+        }
+    </script>
 </body>
 {% endblock content %}

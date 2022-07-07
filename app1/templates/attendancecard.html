@@ -1,0 +1,84 @@
+{% extends 'basehr.html' %}{%load static%} {% block content %}
+<style>
+    .card {
+        width: 420px;
+        height: 180px;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .widt {
+        width: 880px;
+    }
+    
+    @media only screen and (max-width: 500px) {
+        .widt {
+            width: 430px;
+        }
+    }
+</style>
+
+<body>
+
+
+
+
+
+
+        <div class="row">
+
+            
+            <div class="col-md-4 mb-4 stretch-card transparent">
+
+                <div class="card" style="background-color:coral;">
+                    <a href="{% url 'attendance' %}">
+                        <div class="card-body">
+                            <div class="mb-4  pt-4">
+                                <h4 class="text-light" style="display: inline-block;">IT Head Attendance</h4>
+                                <h2 class="pl-5 text-light" style="float:right;display: inline-block;"></h2>
+                            </div>
+                            <!-- <p class="mb-4 mt-3 "><h4 class="text-light">Current Leads</h4></p>
+          <p class="fs-30  pt-2 text-light">2</p> -->
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-4 mb-4 stretch-card transparent">
+                <div class="card card-tale">
+                    <a href="{% url 'attendance' %}">
+                        <div class="card-body">
+
+                            <div class="mb-4  pt-4">
+                                <h4 class="text-light" style="display: inline-block;">Document officers Attendance</h4>
+                                <h2 class="pl-5 text-light" style="float:right;display: inline-block;"></h2>
+                            </div>
+                            <!-- <p class="mb-4 mt-3"><h4>Previous Leads</h4></p>
+          <p class="fs-30  pt-2">2</p> -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 stretch-card transparent">
+                <div class="card card-tale" style="background-color:darksalmon;">
+                    <a href="{% url 'attendance' %}">
+                        <div class="card-body">
+
+                            <div class="mb-4  pt-4">
+                                <h4 class="text-light" style="display: inline-block;">Student councilors Attendance</h4>
+                                <h2 class="pl-5 text-light" style="float:right;display: inline-block;"></h2>
+                            </div>
+                            <!-- <p class="mb-4 mt-3"><h4>Previous Leads</h4></p>
+          <p class="fs-30  pt-2">2</p> -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            
+
+
+</body>
+{% endblock %}

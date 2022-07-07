@@ -1,0 +1,27 @@
+{% extends 'basehr.html' %} {% block content %}
+<style>
+    .container{
+        padding-top:55px;
+    }
+    
+</style>
+<fieldset>
+<div class="container">
+    <div class="form-group">
+        <label for="exampleInputName1">Start Date</label>
+        <input type="date" class="form-control" id="exampleInputName1" placeholder="Start Date" value="Rafi" required>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputName1">End Date</label>
+        <input type="date" class="form-control" id="exampleInputName1" placeholder="End Date" value="Rafi" required>
+    </div>
+<center>
+    <div class="form-group">
+        <a href="{% url 'attendancesearch' %}" type="button" class="btn btn-danger" style="height:39px;">Search</a>
+    </div>
+
+</center>
+
+</div>
+</fieldset>
+{% endblock %}

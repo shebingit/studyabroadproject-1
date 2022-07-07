@@ -1,0 +1,240 @@
+{% extends 'basehr.html' %} {% block content %}
+
+
+
+
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title" style="text-align:center">Document officers</h4>
+            <form>
+                <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name" style="color:rgb(7, 6, 6);">
+                </div>
+            </form>
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Contact
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                              Gender
+                          </th>
+                            
+
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                        <tr>
+                            <td class="py-1">
+                                <a href="{% url 'documentofficers' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                                    <p><span><img src="static/images/faces/face1.jpg" alt="image" /></span> Herman Beck
+                                    </p>
+                                </a>
+                            </td>
+                            <td>
+                                9462347896
+                            </td>
+                            <td>
+                                beck@gmail.com
+                            </td>
+                            <td>
+                              Male
+                          </td>
+
+                        </tr>
+                        
+                            
+                          <tr>
+                            <td class="py-1">
+                                <a href="{% url 'documentofficers' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                                    <p><span><img src="static/images/faces/face1.jpg" alt="image" /></span> Herman Beck
+                                    </p>
+                                </a>
+                            </td>
+                            <td>
+                                9462347896
+                            </td>
+                            <td>
+                                beck@gmail.com
+                            </td>
+                            <td>
+                              Male
+                          </td>
+                        </tr>
+                        <tr>
+                            <td class="py-1">
+                                <a href="{% url 'documentofficers' %}" style="margin-left:20px;text-decoration:none;color: black;">
+                                    <p><span><img src="static/images/faces/face1.jpg" alt="image" /></span> Herman Beck
+                                    </p>
+                                </a>
+                            </td>
+                            <td>
+                                9462347896
+                            </td>
+                            <td>
+                                beck@gmail.com
+                            </td>
+                            <td>
+                              Male
+                          </td>
+                          </tr>
+
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+
+    
+<style>
+    .popup{
+        width:450px;
+        height:580px;
+        background: white;
+        border-radius:6px;
+        position:absolute;
+        transform: translate(-50%,-50%) scale(0.1);
+        text-align:center;
+        visibility:hidden;
+        transition: transform 0.4s, top 0.4s;
+        top:58%;
+        left:60%;
+        border-style:ridge;
+        border-color:lightgreen;
+
+    }
+    .open-popup{
+        visibility:visible;
+        transform: translate(-50%,-50%) scale(1);
+
+    }
+  </style>
+<div class="container">
+  <center>
+    <button type="submit" class="btn btn-primary" style="float:center;" onclick="openPopup()">Add Document Officer</button>
+  </center>
+    <div class="popup" id="popup" style="background-color:lightgreen;">
+        <a href="{% url 'documentofficerprofile' %}" class="btn btn-danger" style="float:right;"  onclick="closePopup()">X</a>
+        
+        
+
+        <center>
+        <h4>Add new document officer</h4>
+      </center>
+      <br>
+        <form action="">
+            
+            <input type="text" placeholder="Name" style="width:315px;" name="firstname">
+            <br>
+            
+            <br>
+            
+            <input type="text" placeholder="Contact no:" style="width:315px;" name="cntct">
+            <br>
+            <br>
+            
+            <input type="e-mail" placeholder="E-mail id:" style="width:315px;" name="email">
+            <br>
+            <br>
+            
+            <input type="textarea" placeholder="Address" style="width:315px;height:74px;" name="address">
+            <br>
+            
+            <br>
+            
+            <input type="text" placeholder="State" style="width:315px;" name="state">
+            <br>
+            <br>
+            
+
+<select name="country" style="width:315px;" id="country">
+  <option value="India">India</option>
+  <option value="uk">UK</option>
+  <option value="eng">England</option>
+  
+</select>
+<br>
+
+            <br>
+            <label for="fileselect"  style="padding-left:75px;width:315px;"></label>
+            <input type="file" name="upload" id="fileselect">
+            <br>
+            <br>
+            <a href="{% url 'documentofficerprofile' %}" class="btn btn-primary" style="width:75px;height:40px;" value="Submit" onclick="closePopup()">Submit</a>
+        </form> 
+    </div>
+</div>
+<script>
+    let popup = document.getElementById("popup");
+
+    function openPopup(){
+        popup.classList.add("open-popup");
+
+    }
+    function closePopup(){
+        popup.classList.remove("open-popup");
+
+    }
+
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+
+            
+    
+   
+    <div class="col-md-4 mb-4 stretch-card transparent">
+        <div class="card card-tale">
+            <a href="{% url 'previousithead' %}">
+                <div class="card-body">
+
+                    <div class="mb-4  pt-4">
+                        <h4 class="text-light" style="display: inline-block;">Previous Document officers </h4>
+                        <h2 class="pl-5 text-light" style="float:right;display: inline-block;">8</h2>
+                    </div>
+                    <!-- <p class="mb-4 mt-3"><h4>Previous Leads</h4></p>
+  <p class="fs-30  pt-2">2</p> -->
+                </div>
+            </a>
+        </div>
+    </div>
+    <br>
+    
+{% endblock %}

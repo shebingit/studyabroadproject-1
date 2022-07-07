@@ -1,0 +1,42 @@
+{% extends 'basehr.html' %} {% block content %}
+
+
+
+
+
+<div class="row">
+
+            
+    
+   
+    <div class="col-md-4 mb-4 stretch-card transparent">
+        <div class="card card-tale">
+            <a href="{% url 'currentdocoff' %}">
+                <div class="card-body">
+
+                    <div class="mb-4  pt-4">
+                        <h4 class="text-light" style="display: inline-block;">Current Document officers </h4>
+                        <h2 class="pl-5 text-light" style="float:right;display: inline-block;">4</h2>
+                    </div>
+                    
+                </div>
+            </a>
+        </div>
+        </div>
+        <div class="col-md-4 mb-4 stretch-card transparent">
+        <div class="card card-tale" style="background-color:lightgreen;">
+            <a href="{% url 'previousdocoff' %}">
+                <div class="card-body">
+
+                    <div class="mb-4  pt-4">
+                        <h4 class="text-light" style="display: inline-block;">Previous Document officers </h4>
+                        <h2 class="pl-5 text-light" style="float:right;display: inline-block;">8</h2>
+                    </div>
+                    
+                </div>
+            </a>
+        </div>
+    
+    <br>
+    
+{% endblock %}

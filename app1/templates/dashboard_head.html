@@ -110,7 +110,7 @@
 
     <div class="container mt-5 text-center mx-auto">
         <div class="div text-left">
-            <h4 class="font-monospace">Team-Leads</h4>
+            <h4 class="font-monospace">Team-Lead</h4>
         </div>
 
         <div class="row">
@@ -127,32 +127,6 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 mb-4">
-                <a href="team_leader_clints" style="text-decoration: none;">
-                    <div class="mask  p-4  stretch-card transparent" href="">
-                        <div class="card card-light-blue">
-                            <div class="card-body">
-                                <h5 class="mb-4 fw-bold">John philip</h5>
-                                <p class="fs-30 mb-2 fw-bold">5</p>
-                                <p>This Month</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 mb-4">
-                <a href="team_leader_clints" style="text-decoration: none;">
-                    <div class="mask  p-4  stretch-card transparent" href="">
-                        <div class="card card-light-danger">
-                            <div class="card-body">
-                                <h5 class="mb-4 fw-bold">Henry Adam</h5>
-                                <p class="fs-30 mb-2 fw-bold">7</p>
-                                <p>This Month</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
         </div>
 
@@ -163,35 +137,33 @@
 
 </div>
 <script>
-    $(document).ready(function(){
-      $("#myInput").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#myTable tr").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
         });
-      });
     });
-    </script>
-
-   
+</script>
 
 
 
-   <div style="padding-top:50px!important;"></div>
 
-       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-       {% if msg_success %}
-   <script>
-       Swal.fire({
-           position: 'center',
-           icon: 'success',
-           text: '{{ msg_success }}',
-           showConfirmButton: false,
-           timer: 3000
-       }).then(function () {
-           javascript: history.go(-2);
-       })
-       
-   </script>
-   {% endif %}
-{% endblock content %}
+
+<div style="padding-top:50px!important;"></div>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% if msg_success %}
+<script>
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        text: '{{ msg_success }}',
+        showConfirmButton: false,
+        timer: 3000
+    }).then(function() {
+        javascript: history.go(-2);
+    })
+</script>
+{% endif %} {% endblock content %}

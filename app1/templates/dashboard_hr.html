@@ -1,0 +1,300 @@
+{% extends "basehr.html" %} {% block content %}
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<div class="container-fluid m-2">
+    <div class="row mb-5 ">
+        <div id="prof" class="col-md-4 col-sm-12 my-2">
+            <div class="h-100" style="background-color: #ffffff;border: hidden;border-radius: 13px;">
+                <h4 class="text-center py-3 fs-2 fw-bold">PROFILE</h4>
+                <div class="text-center">
+                    <img src="https://thumbs.dreamstime.com/b/portrait-smart-male-profile-symbol-minimal-cartoon-style-166146853.jpg" alt="prof" class="w-50 rounded-circle">
+                </div>
+                <div class="text-center py-3 fs-3 font-monospace">
+                    <h6 class=" fs-6 py-2">Joining date: 20/05/2022</h6>
+                    <h6 class=" fs-6 py-2">Designation: HR</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-12 float-end my-2">
+            <div class="h-100" style="background-color: #ffffff;border: hidden;border-radius: 13px;">
+                <div class="p-3 fw-bold">
+
+                    <div class="card-body">
+                        <div class="d-flex flex-row justify-content-between">
+                            <p class="text-muted mb-1">Your data status</p>
+                        </div>
+                        <div class="row p-3 mt-3">
+                            <div class="col-12">
+                                <div class="preview-list">
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                      <div class="preview-icon bg-primary">
+                        <i class="mdi mdi-file-document"></i>
+                      </div>
+                    </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow fw-bold">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold">NAME</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+
+                                                <h6 class="preview-subject ">Dilshad</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                      <div class="preview-icon bg-success">
+                        <i class="mdi mdi-cloud-download"></i>
+                      </div>
+                    </div> -->
+                                        <!-- <div class="preview-item-content d-sm-flex flex-grow">
+                                                <div class="flex-grow">
+                                                    <h6 class="preview-subject fw-bold">DEPARTMENT</h6>
+    
+                                                </div>
+                                                <div class="me-auto text-sm-right pt-2 pt-sm-0">
+                                                    <h6 class="preview-subject ">Developer</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="preview-item border-bottom"> -->
+                                        <!-- <div class="preview-thumbnail">
+                      <div class="preview-icon bg-info">
+                        <i class="mdi mdi-clock"></i>
+                      </div>
+                    </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold">EMAIL</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+                                                <h6 class="preview-subject ">dlz611606@gmail.com</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item border-bottom">
+                                        <!-- <div class="preview-thumbnail">
+                      <div class="preview-icon bg-danger">
+                        <i class="mdi mdi-email-open"></i>
+                      </div>
+                    </div> -->
+                                        <div class="preview-item-content d-sm-flex flex-grow">
+                                            <div class="flex-grow">
+                                                <h6 class="preview-subject fw-bold">CONTACT</h6>
+
+                                            </div>
+                                            <div class="me-auto text-sm-right pt-2 pt-sm-0">
+                                                <h6 class="preview-subject ">8086611606</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- 
+          <style>
+            .popup{
+                width:400px;
+                background: white;
+                border-radius:6px;
+                position:absolute;
+                transform: translate(-50%,-50%) scale(0.1);
+                text-align:center;
+                visibility:hidden;
+                transition: transform 0.4s, top 0.4s;
+                top:50%;
+                left:60%;
+                border-style: solid;
+
+            }
+            .open-popup{
+                visibility:visible;
+                transform: translate(-50%,-50%) scale(1);
+
+            }
+          </style>
+        <div class="container">
+            <button type="submit" class="btn btn-primary" style="float:center;" onclick="openPopup()">Add team leads</button>
+            <div class="popup" id="popup">
+                <a href="{% url 'dashboard' %}" class="btn btn-danger" style="float:right;"  onclick="closePopup()">X</a>       <br>
+
+                <form action="">
+                    First name:<br>
+                    <input type="text" name="firstname">
+                    <br>
+                    Last name:<br>
+                    <input type="text" name="lastname">
+                    <br>
+                    Contact no::<br>
+                    <input type="text" name="cntct">
+                    <br>
+                    E-mail id:<br>
+                    <input type="e-mail" name="email">
+                    <br>
+                    Address:<br>
+                    <input type="text" name="address">
+                    <br>
+                    Register no:<br>
+                    <input type="text" name="reg">
+                    <br>
+                    <br>
+                    <label for="fileselect">Profile:</label>
+                    <input type="file" name="upload" id="fileselect">
+                    <br>
+                    <br>
+                    <a href="{% url 'addteamlead' %}" class="btn btn-primary" style="width:75px;height:40px;" value="Submit" onclick="closePopup()">Submit</a>
+                </form> 
+            </div>
+        </div>
+        <script>
+            let popup = document.getElementById("popup");
+
+            function openPopup(){
+                popup.classList.add("open-popup");
+
+            }
+            function closePopup(){
+                popup.classList.remove("open-popup");
+
+            }
+
+        </script>
+        
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <a href="team_leader_clints" style="text-decoration: none;">
+                    <div class="mask  p-4  stretch-card transparent" href="">
+                        <div class="card card-dark-blue">
+                            <div class="card-body">
+                                <h5 class="mb-4 fw-bold">Michel fera</h5>
+                                <p class="fs-30 mb-2 fw-bold">6</p>
+                                <p>This Month</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="team_leader_clints" style="text-decoration: none;">
+                    <div class="mask  p-4  stretch-card transparent" href="">
+                        <div class="card card-light-blue">
+                            <div class="card-body">
+                                <h5 class="mb-4 fw-bold">John philip</h5>
+                                <p class="fs-30 mb-2 fw-bold">5</p>
+                                <p>This Month</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="team_leader_clints" style="text-decoration: none;">
+                    <div class="mask  p-4  stretch-card transparent" href="">
+                        <div class="card card-light-danger">
+                            <div class="card-body">
+                                <h5 class="mb-4 fw-bold">Henry Adam</h5>
+                                <p class="fs-30 mb-2 fw-bold">7</p>
+                                <p>This Month</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div> -->
+<br>
+<br>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+   <center> <h4> <d>Performance chart</d></h4>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+
+<script>
+    
+var xValues = ["Team 1", "Team 2", "Team 3", "Team 4"];
+var yValues = [ 49,55, 44, 24];
+var barColors = ["yellow", "lightgreen","lightblue","pink"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Team performance"
+    }
+  }
+});
+</script>
+
+</center> -->
+<div id="piechart" style="width:50px;"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  
+  ['Attitude', 2],
+  ['Creativity', 4],
+  ['Work performace', 6.5],
+  
+]);
+// Optional; add a title and set the width and height of the chart
+var options = {'title':'Performance chart', 'width':950, 'height':400};
+
+// Display the chart inside the <div> element with id="piechart"
+var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+chart.draw(data, options);
+}
+</script>
+
+
+
+<style>
+    td {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .N:hover {
+        height: 10%;
+    }
+</style>
+{% endblock content %}
