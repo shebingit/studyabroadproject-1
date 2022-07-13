@@ -1,0 +1,1 @@
+from newdjangoproject.wsgi import application

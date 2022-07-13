@@ -5,6 +5,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('',views.login,name='login'),
+    path('index',views.index,name='index'),
     path('studens',views.studens, name='studens'),
     path('sales',views.sales, name='sales'),
     path('newlyleades',views.newlyleades,name='newlyleades'),
@@ -19,7 +20,7 @@ urlpatterns = [
     path('IT_head_DocumentOfficer_newly_assign_leads',views.IT_head_DocumentOfficer_newly_assign_leads,name='IT_head_DocumentOfficer_newly_assign_leads'),
     path('IT_head_DocumentOfficer_current_leads',views.IT_head_DocumentOfficer_current_leads,name='IT_head_DocumentOfficer_current_leads'),
     path('IT_head_DocumentOfficer_previous_leads',views.IT_head_DocumentOfficer_previous_leads,name='IT_head_DocumentOfficer_previous_leads'),
-     path('IT_head_DocumentOfficer_current_canadaDocuments',views.IT_head_DocumentOfficer_current_canadaDocuments,name='IT_head_DocumentOfficer_current_canadaDocuments'),
+    path('IT_head_DocumentOfficer_current_canadaDocuments',views.IT_head_DocumentOfficer_current_canadaDocuments,name='IT_head_DocumentOfficer_current_canadaDocuments'),
     path('IT_head_Teamlead_currentlead',views.IT_head_Teamlead_currentlead,name='IT_head_Teamlead_currentlead'),
     path('IT_head_Teamlead_previoslead',views.IT_head_Teamlead_previoslead,name='IT_head_Teamlead_previoslead'),
     

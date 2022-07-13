@@ -4,6 +4,8 @@ from django.shortcuts import render
 #sherry george
 def login(request):
     return render(request,'login.html')
+def index(request):
+    return render(request,'Index.html')
 def studens(request):
     return render(request,'councilordashboard.html')#studentscouncilor tab
 def sales(request):
