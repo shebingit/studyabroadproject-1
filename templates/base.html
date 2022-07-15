@@ -400,6 +400,24 @@
                 display: block;
             }
         }
+        @media (max-width: 991px)
+        {
+            .navbar .navbar-menu-wrapper {
+                width: calc(100% - 130px);
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+        }
+        .navbar .navbar-brand-wrapper {
+            width: 180px;
+            height: 60px;
+            }
+        @media (max-width: 480px)
+        {
+        .navbar .navbar-brand-wrapper {
+            width: 130px;
+            }
+        }
     </style>
 </head>
 
@@ -408,7 +426,7 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand xl-3" href="#"><img id="logo" src="{%static 'logo-1.png'%}" style="height: 50px !important;width: 180px !important;"></a>
+                <a class="navbar-brand xl-3" href="#"><img id="logo" src="{%static 'logo-1.png'%}" style="height: 60px !important"></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
